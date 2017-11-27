@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}{{ block.super }}Home{% endblock %}
+{% block style %}
+<style type="text/css">
+
+</style>
+{% endblock %}
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock %}
+
+{% block navbar-right %}
+  {% if not user.is_authenticated %}
+  <!--
+<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
+<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>-->
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block splash %}
+  <div class="jumbotron jumbotron-carousel corporate-jumbo ">
+    
+    <div class="row" style="text-align: center; margin: 15px; height: auto; padding: 15px; ">
+        <h1 style="margin: 0;" ">Learn to
+          <span
+            class="txt-rotate"
+            data-period="1000"
+            data-rotate='[  "Build.", "Inspire.", "Upgrade your skills", "Have fun!" ]'></span>
+          </h1>
+          <h2 style="color: purple;">Our unique ideas that makes you apart from the other.</h2>
+           
+      
+          <div class="w3ls_banner_info" >
+            <h3 style="color: white;">small opportunities are often the beginning of great <span > innovations</span></h3><br>
+            <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Apply Now for Free!</a>
+
+          </div>
+    
+      </div>
+   
+  </div>
+{% endblock splash %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+<a name="about"></a>
+
+
+
+<div class="container" ><br>
+
+  <div class="row" >
+    <div class="col-lg-4" >
+      <h2 style="color:rgb(245,111,25);">Imagine</h2>
+      <br>
+      <p style="color: black;">We are living in a world when there is no limit, free your minds and joins us
+        <h5>Sky is not the limit </h5></p>
+      <br>
+      <p><a class="btn btn-default" style="background-color: rgb(245,111,25); color: white;" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <h2 style="color: #D84141;">Build</h2>
+      <br>
+      <p style="color: black;"">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <br>
+      <p><a class="btn btn-default" style="background-color: #D84141; color: white;" href="#" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <h2>Inspire</h2>
+      <br>
+      <p style="color: black;"">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+      <br>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    </div>
+  </div><br>
+</div><br>
+
+<!-- support-help-bottom -->
+  <div class="support-help-bottom" style=" background-color: #34b3f5;">
+    <div class="col-md-6 w3ls_support_help_bottom_left">
+      <div class="grid">
+        <figure class="effect-moses">
+          <img src="{% static 'site/img/7.jpg' %}" alt=" " class="img-responsive" />
+          <figcaption>
+            <h4>Our <span>Visions</span></h4>
+            <p>Make digital a creator of employment opportunities and a powerful development engine</p>
+          </figcaption>     
+        </figure>
+      </div>
+    </div>
+    <div class="col-md-6 w3ls_support_help_bottom_right" style="text-align: center;">
+      <h3>21th century school</h3><br>
+      <h4>NAWEZA</h4>
+      <p style="color: yellow;">Our aim is to provide tailor-made training for youth, self-learning strategy and monitoring in Digital Field, learning new technologies</p>
+      <div class="w3_more">
+        <a href="{% url 'about' %}" class="link link--yaku" data-toggle="modal" data-target="#myModal">
+          <i class="fa fa-book" aria-hidden="true"></i><span>R</span><span>e</span><span>a</span><span>d</span> <span>M</span><span>o</span><span>r</span><span>e</span>
+        </a>
+      </div>
+    </div>
+    <div class="clearfix"> </div>
+  </div>
+  
+<!-- //support-help-bottom -->
+
+<div  style="background-color: #bbbbbb;">
+
+    <div class="container-fluid" >
+      <div class="w3_agile_banner_bottom_grid" >
+        <p>01.</p>
+        <div class="w3_agile_banner_bottom_grid_pos">
+          <h4>Digital Factories</h4>
+        </div>
+      </div>
+      <h4 class="w3layouts_para" style="color: white;">Social and solidarity enterprise, SPYRTH.IO offers FREE training to become website, mobile Apps and web Apps developer, Integrator, Data Scientist and many other digital professions to find job quickly or to create its own business </h4>
+      <div class="agile_banner_bottom_grids">
+        <ul id="flexiselDemo1"> 
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/2.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Mobile and Web developer </p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/4.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Data Science</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/3.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fab LAb</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/1.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Incubator</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/1.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Community Management</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/1.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Digital Integrator/SEO</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+  
+<!-- support-three_grids -->
+  <div class="support_three_grids" style="background-color: orange;">
+    <div class="container">
+      <div class="col-md-8 agileinfo_support_three_grids_left">
+        <h3 style="color: white;">Be part of an amazing adventure</h3>
+        
+      </div>
+      <div class="col-md-4 agileinfo_support_three_grids_right">
+        <div class="wthree_subscribe">
+          <a href="#newsletter" class="scroll">Apply Now</a>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+<!-- //support-three_grids -->
+{% endblock container %}
+
+{% block scripts %}
+<!-- flexisel -->
+  <script type="text/javascript" src="{% static 'site/js/jquery.flexisel.js' %}"></script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $("#flexiselDemo1").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,        
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+          portrait: { 
+            changePoint:480,
+            visibleItems: 1
+          }, 
+          landscape: { 
+            changePoint:640,
+            visibleItems:2
+          },
+          tablet: { 
+            changePoint:768,
+            visibleItems: 2
+          }
+        }
+      });
+      
+    });
+  </script>
+ 
+<!-- //flexisel -->
+<script src="{% static 'site/js/site.js' %}"></script>
+{% endblock scripts %}
+

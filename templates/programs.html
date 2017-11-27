@@ -1,0 +1,454 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}About{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="programs" %}
+{% endblock %}
+
+<!-- Benefits of the Django application -->
+{% block container %}
+<script type="text/javascript">
+    //made by vipul mirajkar thevipulm.appspot.com
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+
+
+<!-- support-help -->
+  <div class="support-help">
+    <div class="container"> 
+      <div class="row">
+      <div class="col-md-12 text-center"><br><br><br><br>
+        <h1 style="color: white;"><strong> Land your dream job in technology</strong></h1><br><br>
+        <p class="lead" style="color: white;">SPYRTH matches you with world class learning resources <br>and job opportunities to help you launch your career in technology</p>
+        <h1>
+            <a href="" class="typewrite lead" data-period="2000" data-type='[ "An Awesome Adventure Starts Here ","Let the spirit guide you ", "Increase Your Creativity", "Learn, Build and " ]'>
+              <span class="wrap"></span>
+            </a>
+        </h1>
+      </div>
+      <div class="">
+        
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+<!-- //support-help -->
+  <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $("#flexiselDemo1").flexisel({
+        visibleItems: 3,
+        animationSpeed: 1000,
+        autoPlay: true,
+        autoPlaySpeed: 3000,        
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: { 
+          portrait: { 
+            changePoint:480,
+            visibleItems: 1
+          }, 
+          landscape: { 
+            changePoint:640,
+            visibleItems:2
+          },
+          tablet: { 
+            changePoint:768,
+            visibleItems: 2
+          }
+        }
+      });
+      
+    });
+  </script>
+<!-- //flexisel -->
+
+<!-- support-three_grids -->
+  <div class="support_three_grids bg-dark-blue" >
+    <div class="container">
+      
+        <h4 style="color: white; text-align: center;">Be part of an amazing adventure</h4>
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+<!-- //support-three_grids -->
+<style type="text/css">
+  @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+html,
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100%;
+  width: 100%; 
+  background: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+ 
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-big {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.big-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+} 
+.carbox {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.carbox:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-carbox {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-carbox img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.carbox-content {
+  padding:15px;
+  text-align:left;
+}
+.carbox-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.carbox-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.carbox-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.carbox-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+</style>
+<section class="wrapper">
+    <div class="container-big">
+        <div>
+            <div class="col-md-12 text-center">
+        <h2 class="heading">Choose Your Way</h2>
+        <p class="lead">Unleash the Beast</p>
+      </div>
+            
+            <img src="" class="big-logo"/>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="carbox">
+                            <a class="img-carbox" href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                          </a>
+                            <div class="carbox-content">
+                                <h4 class="carbox-title">
+                                    <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Full-Time courses
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Learn new Technologies and Build powerfull systems 
+                                </p>
+                            </div>
+                            <div class="carbox-read-more">
+                                <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="carbox">
+                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
+                            <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
+                          </a>
+                            <div class="carbox-content">
+                                <h4 class="carbox-title">
+                                    <a href="http://www.big.com/2016/02/awesome-material-design-responsive-menu.html"> Part-Time courses
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Learn new Technologies at your own rythm
+                                </p>
+                            </div>
+                            <div class="carbox-read-more">
+                                <a href="http://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="carbox">
+                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
+                            <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
+                          </a>
+                            <div class="carbox-content">
+                                <h4 class="carbox-title">
+                                    <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">Digital Cities
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Join us for an amazing experience in your city
+                                </p>
+                            </div>
+                            <div class="carbox-read-more">
+                                <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="carbox">
+                            <a class="img-carbox" href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html">
+                            <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                          </a>
+                            <div class="carbox-content">
+                                <h4 class="carbox-title">
+                                    <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Start-Ups
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Learn, Build and Launch
+                                </p>
+                            </div>
+                            <div class="carbox-read-more">
+                                <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="carbox">
+                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
+                            <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
+                          </a>
+                            <div class="carbox-content">
+                                <h4 class="carbox-title">
+                                    <a href="http://www.big.com/2016/02/awesome-material-design-responsive-menu.html"> NAWEZA Challenges
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    So you know how to code? Prove it by joining our Challenges
+                                </p>
+                            </div>
+                            <div class="carbox-read-more">
+                                <a href="http://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="carbox">
+                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
+                            <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
+                          </a>
+                            <div class="carbox-content">
+                                <h4 class="carbox-title">
+                                    <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html"> Enterprises Challenges
+                                  </a>
+                                </h4>
+                                <p class="">
+                                    Are you an entreprise? You have new ideas to test? Join us 
+                                </p>
+                            </div>
+                            <div class="carbox-read-more">
+                                <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- newsletter -->
+  <div id="newsletter" class="newsletter">
+    <div class="container">
+      <div class="w3_agile_banner_bottom_grid wthree_newsletter_grid">
+        <p>03.</p>
+        <div class="w3_agile_banner_bottom_grid_pos wthree_newsletter_grid_pos">
+          <h4>Keep In Touch With The SPYRTH</h4>
+        </div>
+      </div>
+      <p class="w3layouts_para w3_agileits_newsletter_para">Fusce quis leo in augue ultricies tincidunt a quis mi. Donec at massa nec sem eleifend fermentum.</p>
+      <div class="agile_banner_bottom_grids agileits_w3layouts_news_grids">
+        <form action="#" method="post">
+          <input name="email1" placeholder="Enter Your Email Address" type="email" required="">
+          <input type="submit" value="Subscribe">
+        </form>
+      </div>
+      
+        <div class="clearfix"> </div>
+     
+    </div>
+  </div>
+<!-- //newsletter -->
+<div id="sec3">
+  <div class="container">
+    <div class="row">
+      <div id="map-outer" class="col-md-12">
+        <div id="address" class="col-md-4">
+          <h2>Our Location</h2>
+          <address>
+            <strong>Spyrth.io LTD</strong><br>
+            Imm Taparura<br>
+            Sfax<br>
+            Beb Bhar<br>
+            TUNISIA 3000<br>
+            <abbr>Phone:</abbr> +216 58844561
+          </address>
+        </div>
+        <div id="map-container" class="col-md-8"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock container %}
+
+{% block scripts %}
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script>
+
+   function init_map() {
+     // Enter the latitude and longitude of your office here
+	 var myLocation = new google.maps.LatLng(34.73164879999999, 10.7633237);
+
+     var mapOptions = {
+          center: myLocation,
+          zoom: 14
+     };
+
+	 var marker = new google.maps.Marker({
+	   position: myLocation,
+	   title:"We are here"});
+
+     var map = new google.maps.Map(document.getElementById("map-container"),
+                                   mapOptions);
+	 marker.setMap(map);
+   }
+
+   google.maps.event.addDomListener(window, 'load', init_map);
+  </script>
+{% endblock scripts %}
