@@ -81,7 +81,7 @@ body>.navbar-transparent {
 .corporate-jumbo {
     /* background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
       url("/static/site/img/banner.jpg"); */
-      background: #34b3f5;
+    background: #34b3f5;
     background-repeat: no-repeat;
     background-position: 80% center;
     background-attachment: fixed;
