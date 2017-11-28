@@ -79,8 +79,9 @@ body>.navbar-transparent {
 }
 /* Home page styling */
 .corporate-jumbo {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
-      url("/static/site/img/banner.jpg");
+    /* background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)),
+      url("/static/site/img/banner.jpg"); */
+      background: #34b3f5;
     background-repeat: no-repeat;
     background-position: 80% center;
     background-attachment: fixed;
@@ -90,7 +91,7 @@ body>.navbar-transparent {
     padding: 10em 0;
     margin-bottom: 0;
     height: 100%;
-    
+
 }
 
 .corporate-jumbo .well {
