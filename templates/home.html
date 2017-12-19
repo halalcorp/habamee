@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 
-{% block title %}{{ block.super }}Home{% endblock %}
+{% block title %}{{ block.super }}Accueil{% endblock %}
 {% block style %}
 <style type="text/css">
 
@@ -25,27 +25,126 @@
 {% endblock %}
 
 {% block splash %}
-  <div class="jumbotron jumbotron-carousel corporate-jumbo ">
-    <div class="row" style="text-align: center; margin: 15px; height: auto; padding: 15px; ">
-        <h1 style="margin: 0;" ">Learn to
-          <span
-            class="txt-rotate"
-            data-period="1000"
-            data-rotate='[  "Build.", "Inspire.", "Upgrade your skills", "Have fun!" ]'></span>
-          </h1>
-          <h2 style="color: purple;">Our unique ideas that makes you apart from the other.</h2>
-           
-      
-          <div class="w3ls_banner_info" >
-            <h3 style="color: white;">small opportunities are often the beginning of great <span > innovations</span></h3><br>
-            <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Apply Now for Free!</a>
-
-          </div>
-    
-      </div>
-      
+  <div class="jumbotron jumbotron-carousel corporate-jumbo " >
    
-  </div>
+      <div class="login-center" >
+            <div class="container " >
+              <div class="row">
+                <div class="col-md-8 col-sm-12" style="border-radius: 2%; "> 
+                  <div class="row" style=" height: auto;">
+                    <div class="row">
+                      <div ><img src="/static/site/ico/log3.png" style="width:26%"></img></div>
+                      
+                      <h3 style="margin-top:15px; color:rgb(36, 150, 243); font-weight:bold">Le chemin le plus FACILE pour</h3> 
+                      <h3 style="margin:2% auto; ">Maitriser le developpement d'applications mobile/web,<br>  
+                        des sites web, des jeux, l'analyse des données, le Machine learning<br>
+                        en fonction vos besoins et de votre niveau</h3>
+                    </div>
+                    <!-- <div class="row" style=" position:relative;height:50px;">
+                      <b style="margin:0%; position: absolute;top: 50%;left: 50%;margin-right: -50%;transform: translate(-50%, -50%)">
+                        <span1 >
+                          <h2>Apprendre à Coder</h2> <br /> 
+                          <h2>Améliorer vos Compétences Techniques</h2> <br />
+                          <h2>Créer un Impact Positif</h2> <br>
+                        </span1>
+                     </b>
+                    </div> -->
+                    <div class="row">
+                      <div class="btn  btn-lg " style="width:30%; background-color: rgb(10, 174, 250);" onclick="location.href='/about/#contact'">Contribuer</div><span ></span>
+                      <div class="btn btn-lg" style="width:30%;background-color: orange" onclick="location.href='{% url 'about' %}'">En savoir plus</div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-4 col-sm-12"  style="vertical-align:-webkit-baseline-middle">
+                      <div class="login" id="card">
+                        <div class="front signin_form" > <br><br>
+                          <h3>Se Connecter</h3><br>
+                            <form class="login-form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="Type your email">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" placeholder="Type your password">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-lock"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                               <!--  <div class="checkbox">
+                                <label><input type="checkbox">Remember me next time.</label>
+                                </div> -->
+                                
+                                <div class="form-group sign-btn">
+                                    <input type="submit" class="btn" value="Log in">
+                                    <h5><a href="#" class="forgot">Can't access your account?</a></h5>
+                                    <h5><strong>New to Naweza?</strong><br><a href="#" id="flip-btn" class="signup signup_link">Sign up for a new account</a></h5>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="back signup_form" style="opacity: 0;"> 
+                            <h3>Inscription</h3><br>
+                            <form class="login-form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Username">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-user"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Password">
+                                    <span class="input-group-btn"><button type="button" class="btn btn-cyan"><span class="fa fa-refresh"></span></button></span>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" placeholder="Confirm Password">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-lock"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                        <span class="input-group-addon">
+                                            <i class="glyphicon glyphicon-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group sign-btn">
+                                    <input type="submit" class="btn" value="Sign up">
+                                    <br><br>
+                                    <h5>Connexion <a href="#" id="unflip-btn" class="signup">Log in</a></h5>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                </div>   
+              </div>
+              <br>
+              <div class="row">
+                <div class="w3ls_banner_info " style="text-align:center;margin-top:5%">
+                  <h5 style="color:#1b5a7c;">une plateforme collaborative dédiée à la formation et l'accompagnement
+                    des porteurs de projets numériques,<br> des jeunes en quête de reconversions</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    <div class="clearfix"></div>
+   
+  
 {% endblock splash %}
 
 {% block container %}
@@ -56,52 +155,54 @@
 
 <div class="container" ><br>
 
-  <div class="row" >
-    <div class="col-lg-4" >
-      <h2 style="color:rgb(245,111,25);">Imagine</h2>
+  <div class="row" style=" margin:10px">
+    <div class="col-lg-4" style="text-align:center;">
+      <img src="/static/site/ico/light-bulb.png" width="30%;"/>
+      <h2 style="color:rgb(58, 146, 248); ">Imagine</h2>
       <br>
-      <p style="color: black;">We are living in a world when there is no limit, free your minds and joins us
-        <h5>Sky is not the limit </h5></p>
+      <p style="color: black;">Une idée ? Des envies de monter en compétence?
+        <h5>Rejoins-nous pour la plus excitante des aventures</h5></p>
       <br>
-      <p><a class="btn btn-default" style="background-color: rgb(245,111,25); color: white;" href="#" role="button">View details &raquo;</a></p>
     </div>
-    <div class="col-lg-4">
-      <h2 style="color: #D84141;">Build</h2>
+    <div class="col-lg-4" style="text-align:center">
+        <img src="/static/site/ico/engineer.png" width="30%;"/>
+      <h2 style="color: rgb(238, 189, 56);">Construis</h2>
       <br>
-      <p style="color: black;"">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p style="color: black;"> Apprends pour donner vie à tes idées 
+      <h5>Améliore tes Compétences Techniques</h5></p>
       <br>
-      <p><a class="btn btn-default" style="background-color: #D84141; color: white;" href="#" role="button">View details &raquo;</a></p>
     </div>
-    <div class="col-lg-4">
-      <h2>Inspire</h2>
+    <div class="col-lg-4" style="text-align:center">
+        <img src="/static/site/ico/rocket-ship-2.png" width="30%;"/>
+      <h2 style="color: rgb(13, 245, 110);">Inspire</h2>
       <br>
-      <p style="color: black;"">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+      <p style="color: black;"> Lance-toi et inpire les autres</p>
       <br>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div>
   </div><br>
 </div><br>
 
 <!-- support-help-bottom -->
-  <div class="support-help-bottom" style=" background-color: #34b3f5;">
+  <div class="support-help-bottom" style=" background-color: orange">
     <div class="col-md-6 w3ls_support_help_bottom_left">
       <div class="grid">
         <figure class="effect-moses">
           <img src="{% static 'site/img/7.jpg' %}" alt=" " class="img-responsive" />
           <figcaption>
-            <h4>Our <span>Visions</span></h4>
-            <p>Make digital a creator of employment opportunities and a powerful development engine</p>
+            <h4>Notre <span>Visions</span></h4>
+            <p style="color:#040505"> Faire du Numérique un createur d'opportunités et un Puissant outil de developpement <br> Contribuer à la réduction de la fracture Numérique, <br> à l'insertion sociale des Jeunes et des milieux défavorisés</p>
           </figcaption>     
         </figure>
       </div>
     </div>
     <div class="col-md-6 w3ls_support_help_bottom_right" style="text-align: center;">
-      <h3>21th century school</h3><br>
-      <h4>NAWEZA</h4>
-      <p style="color: yellow;">Our aim is to provide tailor-made training for youth, self-learning strategy and monitoring in Digital Field, learning new technologies</p>
+      
+      <h4 style="color:#626566; text-align:center">NAWEZA</h4>
+      <h3>Une École du 21ème Siècle</h3><br>
+      <p style="color: rgb(253, 253, 249);">Notre objectif est de fournir des formations sur mesure aux les jeunes, par une stratégie d'auto-apprentissage et de mentorat dans le domaine numérique, l'apprentissage de nouvelles technologies<!-- <br>Our aim is to provide tailor-made training for youth, self-learning strategy and monitoring in Digital Field, learning new technologies --></p>
       <div class="w3_more">
-        <a href="{% url 'about' %}" class="link link--yaku" data-toggle="modal" data-target="#myModal">
-          <i class="fa fa-book" aria-hidden="true"></i><span>R</span><span>e</span><span>a</span><span>d</span> <span>M</span><span>o</span><span>r</span><span>e</span>
+        <a href="{% url 'about' %}" class="link link--yaku">
+          <i class="fa fa-book" aria-hidden="true"></i><span>e</span><span>n</span> <span>s</span><span>a</span><span>v</span><span>o</span><span>i</span><span>r</span> <span>p</span><span>l</span><span>u</span><span>s</span>
         </a>
       </div>
     </div>
@@ -116,19 +217,20 @@
       <div class="w3_agile_banner_bottom_grid" >
         <p>01.</p>
         <div class="w3_agile_banner_bottom_grid_pos">
-          <h4>Digital Factories</h4>
+          <h4>Usine Digitale</h4>
         </div>
       </div>
-      <h4 class="w3layouts_para" style="color: white;">Social and solidarity enterprise, SPYRTH.IO offers FREE training to become website, mobile Apps and web Apps developer, Integrator, Data Scientist and many other digital professions to find job quickly or to create its own business </h4>
+      <h4 class="w3layouts_para" style="color: rgb(255, 255, 255);">Initiative sociale et solidaire, Naweza offre des formations et un accompagnement technique pour devenir développeur de site web, d'applications mobiles/web, analyste de données et de nombreuses autres métiers numériques, dans le but de trouver un emploi rapidement ou de créer son propre projet
+        <!-- <br>Social and solidarity enterprise, SPYRTH.IO offers FREE training to become website, mobile Apps and web Apps developer, Integrator, Data Scientist and many other digital professions to find job quickly or to create its own business  --></h4>
       <div class="agile_banner_bottom_grids">
         <ul id="flexiselDemo1"> 
           <li>
             <div class="agile_banner_bottom_grid">
               <div class="w3layouts_banner_bottom_grid">
-                <img src="{% static 'site/img/2.jpg' %}" alt=" " class="img-responsive" />
+                <img src="{% static 'site/img/mw.png' %}" alt=" " class="img-responsive" />
                 <div class="w3layouts_banner_bottom_grid_pos">
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Mobile and Web developer </p>
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Mobile & Web </p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>en savoir plus</p>
                 </div>
               </div>
             </div>
@@ -136,10 +238,10 @@
           <li>
             <div class="agile_banner_bottom_grid">
               <div class="w3layouts_banner_bottom_grid">
-                <img src="{% static 'site/img/4.jpg' %}" alt=" " class="img-responsive" />
+                <img src="{% static 'site/img/data.jpeg' %}" alt=" " class="img-responsive" />
                 <div class="w3layouts_banner_bottom_grid_pos">
                   <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Data Science</p>
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>en savoir plus</p>
                 </div>
               </div>
             </div>
@@ -149,8 +251,8 @@
               <div class="w3layouts_banner_bottom_grid">
                 <img src="{% static 'site/img/3.jpg' %}" alt=" " class="img-responsive" />
                 <div class="w3layouts_banner_bottom_grid_pos">
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fab LAb</p>
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Fab Lab</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>en savoir plus</p>
                 </div>
               </div>
             </div>
@@ -158,21 +260,10 @@
           <li>
             <div class="agile_banner_bottom_grid">
               <div class="w3layouts_banner_bottom_grid">
-                <img src="{% static 'site/img/1.jpg' %}" alt=" " class="img-responsive" />
-                <div class="w3layouts_banner_bottom_grid_pos">
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Incubator</p>
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="agile_banner_bottom_grid">
-              <div class="w3layouts_banner_bottom_grid">
-                <img src="{% static 'site/img/1.jpg' %}" alt=" " class="img-responsive" />
+                <img src="{% static 'site/img/comm.jpeg' %}" alt=" " class="img-responsive" />
                 <div class="w3layouts_banner_bottom_grid_pos">
                   <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Community Management</p>
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>en savoir plus</p>
                 </div>
               </div>
             </div>
@@ -182,8 +273,20 @@
               <div class="w3layouts_banner_bottom_grid">
                 <img src="{% static 'site/img/1.jpg' %}" alt=" " class="img-responsive" />
                 <div class="w3layouts_banner_bottom_grid_pos">
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Digital Integrator/SEO</p>
-                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Learn more</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Incubateur</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>en savoir plus</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li>
+            <div class="agile_banner_bottom_grid">
+              <div class="w3layouts_banner_bottom_grid">
+                <img src="{% static 'site/img/seo1.jpg' %}" alt=" " class="img-responsive" />
+                <div class="w3layouts_banner_bottom_grid_pos">
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>Integrateur/SEO</p>
+                  <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>en savoir plus</p>
                 </div>
               </div>
             </div>
@@ -199,12 +302,12 @@
   <div class="support_three_grids" style="background-color: orange;">
     <div class="container">
       <div class="col-md-8 agileinfo_support_three_grids_left">
-        <h3 style="color: white;">Be part of an amazing adventure</h3>
+        <h3 style="color: white;"> Tout commence ici</h3>
         
       </div>
-      <div class="col-md-4 agileinfo_support_three_grids_right">
+      <div class="col-md-4 agileinfo_support_three_grids_right" onclick="location.href='/about/#contact'">
         <div class="wthree_subscribe">
-          <a href="#newsletter" class="scroll">Apply Now</a>
+          <a href="/about/#contact" class="scroll">Candidater</a>
         </div>
       </div>
       <div class="clearfix"></div>
@@ -243,8 +346,40 @@
       
     });
   </script>
+  
+  <script>
+    $().ready(function() {
+	$("#card").flip({
+	  trigger: 'manual'
+	});
+});
+
+
+$(".signup_link").click(function() {
+
+	$(".signin_form").css('opacity', '0');
+	$(".signup_form").css('opacity', '100');
+	
+	
+	$("#card").flip(true);
+	
+	return false;
+});
+
+$("#unflip-btn").click(function(){
+  
+	$(".signin_form").css('opacity', '100');
+	$(".signup_form").css('opacity', '0');
+	
+  	$("#card").flip(false);
+	
+	return false;
+	
+});
+  </script>
  
 <!-- //flexisel -->
 <script src="{% static 'site/js/site.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.0.18/jquery.flip.js"></script>
 {% endblock scripts %}
 

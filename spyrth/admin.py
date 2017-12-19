@@ -6,4 +6,5 @@ from django.contrib.auth import get_user_model
 from django.core.urlresolvers import reverse
 
 
-admin.site.register(programs)
+admin.site.register(Programs)
+admin.site.register(Subscription)

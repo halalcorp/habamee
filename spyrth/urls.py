@@ -8,10 +8,11 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.HomePage.as_view(), name='home'),
-    url(r'^about/$', views.AboutPage.as_view(), name='about'),
-    url(r'^programs/$', views.ProgramsPage.as_view(), name='programs'),
-    url(r'^apply/$', views.ApplyPage.as_view(), name='apply'),
-    url(r'^blog/$', views.BlogPage.as_view(), name='blog'),
+    url(r'^404/$', views.NotFoundPage.as_view(), name='404'),
+    url(r'^about/$', views.about, name='about'),# views.AboutPage.as_view(), name='about'),
+    url(r'^programs/$', views.getprograms, name='programs'), #views.ProgramsPage.as_view(), name='programs'),
+    url(r'^apply/$', views.NotFoundPage.as_view(), name='apply'),#ApplyPage.as_view(), name='apply'),
+    url(r'^blog/$', views.NotFoundPage.as_view(), name='blog'),#views.BlogPage.as_view(), name='blog'),
     url(r'^users/', include(profiles.urls, namespace='profiles')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(accounts.urls, namespace='accounts')),

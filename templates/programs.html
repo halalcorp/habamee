@@ -77,8 +77,8 @@ var TxtType = function(el, toRotate, period) {
     <div class="container"> 
       <div class="row">
       <div class="col-md-12 text-center"><br><br><br><br>
-        <h1 style="color: white;"><strong> Land your dream job in technology</strong></h1><br><br>
-        <p class="lead" style="color: white;">SPYRTH matches you with world class learning resources <br>and job opportunities to help you launch your career in technology</p>
+        <h1 style="color: white;"><strong> Faites décoller votre carrière / projet</strong></h1><br><br>
+        <p class="lead" style="color: white;"> NAWEZA vous accompagne dans la mise en place votre projet ou le lancement de votre carrière technologique </p>
         <h1>
             <a href="" class="typewrite lead" data-period="2000" data-type='[ "An Awesome Adventure Starts Here ","Let the spirit guide you ", "Increase Your Creativity", "Learn, Build and " ]'>
               <span class="wrap"></span>
@@ -127,7 +127,7 @@ var TxtType = function(el, toRotate, period) {
   <div class="support_three_grids bg-dark-blue" >
     <div class="container">
       
-        <h4 style="color: white; text-align: center;">Be part of an amazing adventure</h4>
+        <h4 style="color: white; text-align: center;">Demarrez une aventure excitante</h4>
       
       <div class="clearfix"></div>
     </div>
@@ -136,16 +136,7 @@ var TxtType = function(el, toRotate, period) {
 <style type="text/css">
   @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
-html,
-body {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
-  height: 100%;
-  width: 100%; 
-  background: #FFF;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-}
+
  
 .wrapper {
   display: table;
@@ -207,8 +198,8 @@ h1.heading {
     overflow: hidden;
 }
 .img-carbox img{
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  margin: 5px;
   object-fit:cover; 
   transition: all .25s ease;
 } 
@@ -239,142 +230,40 @@ h1.heading {
     <div class="container-big">
         <div>
             <div class="col-md-12 text-center">
-        <h2 class="heading">Choose Your Way</h2>
-        <p class="lead">Unleash the Beast</p>
+        <h2 class="heading">Nos Offres</h2>
+        <p class="lead"></p>
       </div>
             
-            <img src="" class="big-logo"/>
+            <!-- <img src="" class="big-logo"/> -->
         </div>
         <div class="content">
             <div class="container">
                 <div class="row">
+                  {% for item in program %}
                     <div class="col-xs-12 col-sm-4">
                         <div class="carbox">
-                            <a class="img-carbox" href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                            <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
+                            <a class="img-carbox" href="#">
+                            <img src="{{item.picture.url}}"  />
                           </a>
                             <div class="carbox-content">
                                 <h4 class="carbox-title">
-                                    <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Full-Time courses
+                                    <a href="#"> {{ item.title }}<!-- Full-Time courses -->
                                   </a>
                                 </h4>
                                 <p class="">
-                                    Learn new Technologies and Build powerfull systems 
+                                    {{ item.shortDesc }}   
                                 </p>
                             </div>
                             <div class="carbox-read-more">
-                                <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
-                                    Read More
+                                <a href="#" class="btn btn-link btn-block">
+                                    En Savoir Plus
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="carbox">
-                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
-                          </a>
-                            <div class="carbox-content">
-                                <h4 class="carbox-title">
-                                    <a href="http://www.big.com/2016/02/awesome-material-design-responsive-menu.html"> Part-Time courses
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    Learn new Technologies at your own rythm
-                                </p>
-                            </div>
-                            <div class="carbox-read-more">
-                                <a href="http://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="carbox">
-                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
-                          </a>
-                            <div class="carbox-content">
-                                <h4 class="carbox-title">
-                                    <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">Digital Cities
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    Join us for an amazing experience in your city
-                                </p>
-                            </div>
-                            <div class="carbox-read-more">
-                                <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="carbox">
-                            <a class="img-carbox" href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                            <img src="https://1.bp.blogspot.com/-Bii3S69BdjQ/VtdOpIi4aoI/AAAAAAAABlk/F0z23Yr59f0/s640/cover.jpg" />
-                          </a>
-                            <div class="carbox-content">
-                                <h4 class="carbox-title">
-                                    <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Start-Ups
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    Learn, Build and Launch
-                                </p>
-                            </div>
-                            <div class="carbox-read-more">
-                                <a href="http://www.big.com/2016/03/bootstrap-3-carousel-fade-effect.html" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="carbox">
-                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://3.bp.blogspot.com/-bAsTyYC8U80/VtLZRKN6OlI/AAAAAAAABjY/kAoljiMALkQ/s400/material%2Bnavbar.jpg" />
-                          </a>
-                            <div class="carbox-content">
-                                <h4 class="carbox-title">
-                                    <a href="http://www.big.com/2016/02/awesome-material-design-responsive-menu.html"> NAWEZA Challenges
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    So you know how to code? Prove it by joining our Challenges
-                                </p>
-                            </div>
-                            <div class="carbox-read-more">
-                                <a href="http://codepen.io/wisnust10/full/ZWERZK/" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="carbox">
-                            <a class="img-carbox" href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html">
-                            <img src="https://4.bp.blogspot.com/-TDIJ17DfCco/Vtneyc-0t4I/AAAAAAAABmk/aa4AjmCvRck/s1600/cover.jpg" />
-                          </a>
-                            <div class="carbox-content">
-                                <h4 class="carbox-title">
-                                    <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html"> Enterprises Challenges
-                                  </a>
-                                </h4>
-                                <p class="">
-                                    Are you an entreprise? You have new ideas to test? Join us 
-                                </p>
-                            </div>
-                            <div class="carbox-read-more">
-                                <a href="http://www.big.com/2016/03/5-button-hover-animation-effects-css3.html" class="btn btn-link btn-block">
-                                    Read More
-                                </a>
-                            </div>
-                        </div>
-                      </div>
+                    {% endfor %}
+                    
+                    
                 </div>
             </div>
         </div>
@@ -387,16 +276,20 @@ h1.heading {
   <div id="newsletter" class="newsletter">
     <div class="container">
       <div class="w3_agile_banner_bottom_grid wthree_newsletter_grid">
-        <p>03.</p>
+        <p>02.</p>
         <div class="w3_agile_banner_bottom_grid_pos wthree_newsletter_grid_pos">
-          <h4>Keep In Touch With The SPYRTH</h4>
+          <h4>Restons en contact</h4>
         </div>
       </div>
-      <p class="w3layouts_para w3_agileits_newsletter_para">Fusce quis leo in augue ultricies tincidunt a quis mi. Donec at massa nec sem eleifend fermentum.</p>
+      <p class="w3layouts_para w3_agileits_newsletter_para">Et même si nos raisons nous séparent,<br> même si l'on vit cet amour comme un art, <br>même si parfois on fait semblant d'y croire <br>autant le vivre même un peu</p>
       <div class="agile_banner_bottom_grids agileits_w3layouts_news_grids">
-        <form action="#" method="post">
-          <input name="email1" placeholder="Enter Your Email Address" type="email" required="">
-          <input type="submit" value="Subscribe">
+        <p>{{ message }}</p>
+        <form action="{% url 'programs' %}" method="post">
+            {% csrf_token %}
+           <!--  <input name="email1" placeholder="Laissez nous votre mail" type="email" required=""> -->
+          {{ form.email }}
+          <input type="submit" value="Gardons le lien">
+         
         </form>
       </div>
       
@@ -410,14 +303,14 @@ h1.heading {
     <div class="row">
       <div id="map-outer" class="col-md-12">
         <div id="address" class="col-md-4">
-          <h2>Our Location</h2>
+          <h2></h2>
           <address>
-            <strong>Spyrth.io LTD</strong><br>
+            <strong>Naweza</strong><br>
             Imm Taparura<br>
-            Sfax<br>
+            Sfax 3000<br>
             Beb Bhar<br>
-            TUNISIA 3000<br>
-            <abbr>Phone:</abbr> +216 58844561
+            TUNISIE <br>
+            <abbr>Téléphone:</abbr> +216 58844561
           </address>
         </div>
         <div id="map-container" class="col-md-8"></div>

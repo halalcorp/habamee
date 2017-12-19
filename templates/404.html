@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}{{ block.super }}404{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="" %}
+{% endblock %}
+
+<!-- Benefits of the Django application -->
+{% block container %}
+<style>
+    .cded{
+        background-image: url("/static/site/img/404.jpg");
+    
+    /* background: #34b3f5; */
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+    height: 100%;
+    }
+</style>
+
+  <div class="cded">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:6%; text-align:center; color:aliceblue; ">
+                <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Chantier en cours... <br>Nous travaillons d'arrache pied pour vous offrir une meilleure expérience. <br>
+                Laissez nous un mot, ça nous fera plaisir ;)</h3>
+                <br>
+                
+        </div>
+        <div class="col-md-12" style="margin-top:15%; text-align:center;">
+                <div class="btn  btn-lg " style="width:30%; background-color: rgb(10, 174, 250);" onclick="location.href='/about/#contact'">Nous envoyer un message</div><span ></span>
+                <div class="btn btn-lg" style="width:30%;background-color: orange" onclick="location.href='{% url 'about' %}'">En savoir plus</div>
+             <br> </div>
+      
+      
+    </div>
+  </div>
+
+
+{% endblock container %}

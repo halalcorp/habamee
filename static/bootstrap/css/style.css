@@ -329,7 +329,7 @@ a.w3_agile_vimeo:hover{
 }
 .w3ls_banner_info{
 	margin: 18em 0 0;
-    width: 40%;
+	width: 100%;	
 }
 .w3ls_banner_info h3{
 	font-size: 2em;
@@ -2191,6 +2191,7 @@ h2.typoh2{
 	}
 	.w3ls_banner_info {
 		margin: 14em 0 0;
+		width: 100%;
 	}
 	.w3ls_support_help_bottom_right {
 		padding: 3em 4em 0 3em;
@@ -2226,6 +2227,10 @@ h2.typoh2{
 		background-position:0px -60px;
 		min-height: 270px;
 	}
+	.w3ls_banner_info {
+		margin: 14em 0 0;
+		width: 100%;
+	}
 }
 @media (max-width:1280px){
 	.banner {
@@ -2246,7 +2251,7 @@ h2.typoh2{
 		width: 25%;
 	}
 	.w3ls_banner_info {
-		width: 50%;
+		width: 100%;
 		margin: 12em 0 0;
 	}
 	.banner {
@@ -2361,6 +2366,7 @@ h2.typoh2{
 @media (max-width:1024px){
 	.w3ls_banner_info h3 {
 		font-size: 1.8em;
+		width: 100%;
 	}
 	.banner-bottom, .support-help, .testimonials, .services {
 		padding: 3em 0 4em;
@@ -2654,6 +2660,7 @@ h2.typoh2{
 	}
 	.w3ls_banner_info {
 		margin: 8em 0 0;
+		width: 100%;
 	}
 	.grid figure figcaption {
 		padding: 7em;
@@ -2827,6 +2834,7 @@ h2.typoh2{
 	}
 	.w3ls_banner_info {
 		margin: 5em 0 0;
+		width: 100%;
 	}
 	.banner {
 		min-height: 420px;
@@ -2959,7 +2967,7 @@ h2.typoh2{
 	}
 	.w3ls_banner_info {
 		margin: 4em 0 0;
-		width: 55%;
+		width: 100%;
 	}
 	.w3ls_banner_info h3 {
 		font-size: 1.2em;
